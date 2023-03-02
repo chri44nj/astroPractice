@@ -1,0 +1,23 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="navItem">
+  <img src="/icons/home-filled.svg" alt="" />
+  {text}
+</div>
+
+<style>
+  .navItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: "Lato";
+    padding-left: 1rem;
+  }
+
+  .navItem:hover {
+    color: white;
+    cursor: pointer;
+  }
+</style>

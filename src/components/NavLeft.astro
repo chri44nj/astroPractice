@@ -1,0 +1,83 @@
+---
+---
+
+<div class="navLeft">
+  <div class="topItems">
+    <div class="logo">
+      <img src="/icons/logo-alt.svg" alt="" />
+      <h1>Spotify</h1>
+    </div>
+    <slot />
+  </div>
+
+  <div class="bottomItems">
+    <p>Cookies</p>
+    <button><img src="/icons/globe-icon.svg" alt="" /> Dansk</button>
+  </div>
+</div>
+
+<style>
+  .navLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #016136;
+    font-weight: bold;
+    font-family: "Lato";
+  }
+
+  .topItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-block: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .logo:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .bottomItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .bottomItems:hover {
+    cursor: pointer;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #016136;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  button:hover {
+    color: white;
+    cursor: pointer;
+  }
+</style>

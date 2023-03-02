@@ -1,0 +1,44 @@
+---
+const { genre, description } = Astro.props;
+---
+
+<div class="musicCardFrame">
+  <div class="musicCard">
+    <img src="/img/musicImg.jpg" alt="" />
+    <h3>{genre}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .musicCardFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009f58;
+    border-radius: 5px;
+    width: 70%;
+    font-family: "Lato";
+  }
+
+  .musicCardFrame:hover {
+    background-color: #016f3d;
+    cursor: pointer;
+  }
+
+  .musicCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+</style>

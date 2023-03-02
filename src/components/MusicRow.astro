@@ -1,0 +1,44 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="music">
+  <div class="musicHeader">
+    <h2>{text}</h2>
+    <p>Vis alle</p>
+  </div>
+  <div class="musicGrid">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .music {
+    background-color: #04c970;
+    font-family: "Lato";
+  }
+
+  .musicHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .musicHeader h2:hover,
+  .musicHeader p:hover {
+    cursor: pointer;
+  }
+
+  .musicGrid {
+    display: flex;
+    gap: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-inline: 2.5rem;
+  }
+
+  p {
+    font-weight: bold;
+  }
+</style>

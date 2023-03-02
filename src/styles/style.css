@@ -1,7 +1,12 @@
-body {
-  background: darkcyan;
+/** GENERAL **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  color: white;
+/** **/
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 0.93fr 5fr;
 }

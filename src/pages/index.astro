@@ -1,8 +1,10 @@
 ---
 import "../styles/style.css";
-import Card from "../components/Card.astro";
-import Navigation from "../components/Navigation.astro";
-import Button from "../components/Button.astro";
+import NavTop from "../components/NavTop.astro";
+import NavLeft from "../components/NavLeft.astro";
+import LeftNavItem from "../components/LeftNavItem.astro";
+import MusicRow from "../components/MusicRow.astro";
+import MusicCard from "../components/MusicCard.astro";
 ---
 
 <html lang="en">
@@ -15,18 +17,42 @@ import Button from "../components/Button.astro";
   </head>
 
   <body>
-    <header>
-      <Navigation />
-    </header>
-
     <main>
-      <h1>Astro</h1>
-      <p>Jeg har en bestemt farve?</p>
       <!-- <Card header="Hey betch" text="Lorem ipsum dollar">
         <img src="/healthyheat.webp" alt="" />
       </Card> -->
-      <Button variant="primary" size="large">Text</Button>
-      <Button variant="secondary" size="medium">Text</Button>
+      <!-- <Button variant="primary" size="large">Text</Button>
+      <Button variant="secondary" size="medium">Text</Button> -->
+
+      <section class="layoutGrid">
+        <NavLeft>
+          <LeftNavItem text="Hjem" />
+          <LeftNavItem text="Søg" />
+          <LeftNavItem text="Dit bibliotek" />
+          <br />
+          <LeftNavItem text="Opret playliste" />
+          <LeftNavItem text="Sange, du synes godt..." />
+        </NavLeft>
+        <div>
+          <NavTop />
+          <MusicRow text="Fokus">
+            <MusicCard genre="Peaceful Piano" description="It's peace and harmony, right?" />
+            <MusicCard genre="Shitty Piano" description="It's peace and harmony, right?" />
+            <MusicCard genre="Mindless Piano" description="It's peace and harmony, right?" />
+            <MusicCard genre="Beautiful Piano" description="It's peace and harmony, right?" />
+            <MusicCard genre="Amateur Piano" description="It's peace and harmony, right?" />
+            <MusicCard genre="Grandma's Piano" description="It's peace and harmony, right?" />
+          </MusicRow>
+          <MusicRow text="Spotify Playlists">
+            <MusicCard genre="Hipster Tunes" description="Hip but not hop - sucks nuts." />
+            <MusicCard genre="Hipster Crap" description="Hip but not hop - sucks nuts." />
+            <MusicCard genre="Hipster Jazz" description="Hip but not hop - sucks nuts." />
+            <MusicCard genre="Hipster Tracks" description="Hip but not hop - sucks nuts." />
+            <MusicCard genre="Hipster Shite" description="Hip but not hop - sucks nuts." />
+            <MusicCard genre="Hipster Intelligeble" description="Hip but not hop - sucks nuts." />
+          </MusicRow>
+        </div>
+      </section>
     </main>
   </body>
 </html>
